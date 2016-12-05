@@ -1,23 +1,20 @@
 {
-  "name": "duotone-dark-syntax",
+  "name": "tone-dark-syntax",
   "theme": "syntax",
-  "version": "2.0.1",
-  "description": "A dark DuoTone syntax theme",
+  "version": "0.0.0",
+  "description": "A dark Tone syntax theme",
   "keywords": [
     "dark",
-    "purple",
-    "gold",
-    "duotone",
+    "tone",
     "syntax"
   ],
-  "repository": "https://github.com/simurai/duotone-dark-syntax",
+  "repository": "https://github.com/simurai/tone-dark-syntax",
   "license": "MIT",
-  "main": "lib/duotone",
+  "main": "lib/main",
   "engines": {
-    "atom": ">1.9.0"
+    "atom": ">1.9.0 <2.0.0"
   },
   "dependencies": {
-    "duotone-syntax": "^2.0.0",
     "chroma-js": "1.1.1"
   },
   "configSchema": {
