@@ -31,10 +31,17 @@
         },
         "duo": {
           "title": "Duo",
-          "description": "Customize the accent color",
+          "description": "Customize the 1st accent color",
           "order": 2,
           "type": "color",
           "default": "#ffe685"
+        },
+        "tri": {
+          "title": "Tri",
+          "description": "Customize the 2nd accent color",
+          "order": 3,
+          "type": "color",
+          "default": "#ff9966"
         }
       }
     }
