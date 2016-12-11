@@ -35,9 +35,9 @@ setColors = ->
   unsetColors() # prevents adding endless properties
 
   # Color mixing
-  _unoHigh = chroma.mix( uno, 'hsl(250, 0%, 100%)', 0.5); # mix with white
+  _unoHigh = chroma.mix( uno, 'hsl(250, 0%, 100%)', 0.66); # mix with white
   _unoMid  = uno                                           # set by user
-  _unoLow  = chroma.mix( uno, 'hsl(250, 12%, 18%)', 0.75); # mix with background (@syntax-bg)
+  _unoLow  = chroma.mix( uno, 'hsl(250, 12%, 18%)', 0.5); # mix with background (@syntax-bg)
 
   _duoHigh = duo                                           # set by user
   _duoLow  = chroma.mix( duo, 'hsl(250, 12%, 18%)', 0.66); # mix with background (@syntax-bg)
