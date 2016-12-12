@@ -1,0 +1,115 @@
+
+/* 1. Example -------------------------------- */
+
+@import "mixins";
+
+@foreground-color: #333;
+@background-color: hsl(30,100%,96%);
+
+html {
+  font-family: 'Lucida Grande', Verdana, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: @foreground-color;
+  background-color: @background-color;
+}
+
+a {
+  color: @link-color;
+  text-decoration: none;
+  &:hover {
+    color: lighten(@link-color, 5%);
+  }
+}
+
+.avatar {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+
+/* 2. Tests -------------------------------- */
+
+@import "variables";
+@import (reference) "variables";
+
+.variables {
+  @variable: 10px;
+  @another-variable: @variable;
+
+  width: @variable + @another-variable;
+  width: @variable*2;
+
+}
+
+.functions {
+  color: hue(orange);
+  color: lighten(@color, 10%);
+  color: mix(@color, #000, 25%);
+  width: max(5, 10);
+  width: unit(5, px);
+}
+
+.nested {
+  .class {}
+  &::before {}
+  & + & {}
+  .class & {}
+  @media screen {}
+}
+
+.mixin {};
+.mixin() {};
+.mixin(@default: 10px) {};
+
+.use-mixin {
+  .mixin;
+  .mixin();
+  .mixin(5px);
+}
+
+.class {}
+.extended {
+  &:extend(.class);
+  background: blue;
+}
+
+.guard() when (lightness(@a) >= 50%) {}
+.guard();
+
+.test {
+  all: unset;
+}
+
+
+
+
+
+// DuoTone dark 03
+
+// Hues -----------------------------------
+@syntax-uno: 170; // 38
+@syntax-duo: 90; // 12
+
+
+// Language colors -----------------------------------
+
+// Uno hue
+@uno-1: hsl(@syntax-uno, 44%, 92%);
+@uno-2: hsl(@syntax-uno, 33%, 70%);
+@uno-3: hsl(@syntax-uno, 12%, 52%);
+@uno-4: hsl(@syntax-uno,  6%, 40%);
+
+// Duo hue
+@duo-1: hsl(@syntax-duo, 90%, 76%);
+@duo-2: hsl(@syntax-duo, 40%, 50%);
+@duo-3: hsl(@syntax-duo, 20%, 40%);
+
+
+// Base colors -----------------------------------
+@syntax-fg:     @uno-2;
+@syntax-bg:     hsl(@syntax-uno, 4%, 18%);
+@syntax-guide:  lighten(@syntax-bg, 10%);
+@syntax-accent: hsl(@syntax-duo, 100%, 66%);

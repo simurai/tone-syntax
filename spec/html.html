@@ -1,0 +1,60 @@
+
+<!-- 1. Example ****************************** -->
+
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <head>
+    <title>Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/main.css">
+    <style type='text/css'>
+      body {
+        font: 14px/21px 'Times New Roman', serif;
+        color: #333;
+        background-color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&"></script>
+    <script>
+      var map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: -34.397, lng: 150.644},
+        zoom: 8
+      });
+    </script>
+
+    <article>
+      <h1>HTML example</h1>
+      <p>The HTML p element (or HTML Paragraph Element) represents a paragraph of text. Paragraphs are block-level elements.</p>
+    </article>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
+
+
+<!-- 2. Tests ****************************** -->
+
+<title>Title</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/main.css">
+
+<!--[if lt IE 8]><link rel="stylesheet" href="css/ie.css">Condional<![endif]-->
+<!-- Comment -->
+
+<main></main>
+<custom-element></custom-element>
+
+<div>Text</div>
+<div>&nbsp;</div>
+<div id="id" class="class" data-attribute="true"></div>
+
+<div hidden></div>
+<div style="color: black;"></div>
+<div onclick="alert('Hi')"></div>
+
+<img src="atom.svg" alt="Logo">
+<input type="number" min="0" max="100" step="5">
