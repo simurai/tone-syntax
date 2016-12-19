@@ -1,8 +1,5 @@
 // Language syntax highlighting
 
-// Uno hue -----------------------------------
-
-// uno-5
 .punctuation-mixin() {
   .punctuation,
   .bracket,
@@ -12,61 +9,26 @@
 }
 .punctuation-mixin();
 
-.comment
-{ .uno-3(); }
-
-// uno-2
-.source, // Will be used by all languages when no other scope is defined.
-.attribute-name,
-.character.escape
-{ .uno-2(); }
+.comment {
+  .uno-3();
+  font-style: italic;
+}
 
 
-// uno-1
-.html.elements,
-.tag,
-.function-call
-{ .uno-1(); }
+// Default -----------------------------------
+// Will be used by all languages when no other scope is defined
 
-
-// Duo hue -----------------------------------
-
-// duo-3
-.function,
-.variable
-{ .duo-2(); }
-
-// duo-1
-.support,
-.constant,
-.keyword
-{ .duo-1(); }
-
-
-// Tri hue -----------------------------------
-
-// tri-2
-.storage
-{ .tri-2(); }
-
-// tri-1
-.string,
-.constant.numeric,
-.storage.type
-{ .tri-1(); }
-
-
-// -----------------------------------
-// -----------------------------------
-// -----------------------------------
+.source {
+  .uno-2();
+}
 
 
 // Text styles -----------------------------------
+
 .bold {
   font-weight: bold;
 }
 
-.italic,
-.comment {
+.italic {
   font-style: italic;
 }
