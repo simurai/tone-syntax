@@ -34,6 +34,8 @@ a {
 
 @import 'variables';
 
+$variable: $variable;
+
 .variables {
   $variable: 10px;
   $another-variable: $variable;
