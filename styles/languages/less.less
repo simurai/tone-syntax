@@ -1,10 +1,9 @@
 // Less
 
 .less {
-  &.variable:first-child {
-    .uno-2(); // stronger variable color when declaring
-  }
+  &.variable:first-child,
+  .property-list > .variable, // stronger variable color when declaring
   &.mixin {
-    .duo-2();
+    .duo-1();
   }
 }

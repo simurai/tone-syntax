@@ -2,11 +2,11 @@
 
 .css {
   &.punctuation.terminator {
-    .uno-5();
+    .uno-3();
   }
   &.entity .punctuation,
   &.support.property-name {
-    .uno-3();
+    .uno-2();
   }
   &.attribute-name {
     &.id,
@@ -21,13 +21,15 @@
       color: inherit;
     }
   }
+
   &.attribute-name.mixin {
-    .duo-2();
+    .duo-1();
   }
-  &.function {
-    .tri-3();
-  }
+
   &.unit {
     .tri-2();
+  }
+  &.function {
+    .tri-1();
   }
 }

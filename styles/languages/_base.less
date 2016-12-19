@@ -7,27 +7,23 @@
   .punctuation,
   .bracket,
   .brace {
-    .uno-5();
+    .uno-3();
   }
 }
 .punctuation-mixin();
 
-// uno-4
 .comment
-{ .uno-4(); }
-
-// uno-3
-.attribute-name,
-.character.escape
 { .uno-3(); }
 
 // uno-2
-.source // Will be used by all languages when no other scope is defined.
+.source, // Will be used by all languages when no other scope is defined.
+.attribute-name,
+.character.escape
 { .uno-2(); }
+
 
 // uno-1
 .html.elements,
-.entity,
 .tag,
 .function-call
 { .uno-1(); }
@@ -36,15 +32,12 @@
 // Duo hue -----------------------------------
 
 // duo-3
-.support,
-.function
-{ .duo-3(); }
-
-// duo-2
+.function,
 .variable
 { .duo-2(); }
 
 // duo-1
+.support,
 .constant,
 .keyword
 { .duo-1(); }
