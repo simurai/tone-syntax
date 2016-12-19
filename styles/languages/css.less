@@ -1,12 +1,20 @@
 // CSS
 
 .css {
-  &.punctuation.terminator {
+
+  // invalid
+  &.property-name,
+  &.property-value {
     .uno-3();
   }
-  &.entity .punctuation,
-  &.support.property-name {
+
+  // valid
+  &.property-name.support {
     .uno-2();
+  }
+
+  &.tag {
+    .uno-1();
   }
   &.attribute-name {
     &.id,
@@ -15,21 +23,28 @@
       .uno-1();
     }
   }
-  &.at-rule {
-    .uno-1();
-    .keyword.punctuation {
-      color: inherit;
-    }
-  }
 
-  &.attribute-name.mixin {
+
+  &.function {
+    .duo-1();
+  }
+  &.pseudo-class {
     .duo-1();
   }
 
+  &.punctuation.constant,
   &.unit {
     .tri-2();
   }
-  &.function {
+
+  &.string,
+  &.constant {
     .tri-1();
+  }
+
+  // Special case
+
+  &.important {
+    color: @syntax-color-removed;
   }
 }
