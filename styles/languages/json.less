@@ -1,21 +1,25 @@
 // JSON
 
 .json {
-  .string {
-    .uno-2();
-    .punctuation {
-      .uno-3();
-    }
+
+  &.invalid {
+    .uno-3();
   }
-  .value {
-    & > .string {
-      .tri-1();
-      .punctuation {
-        .uno-3();
-      }
-    }
-    .constant {
-      .tri-1();
-    }
+
+  &.value > .string {
+    .duo-1();
   }
+
+  &.constant {
+    .tri-1();
+  }
+
+
+  // Special cases ------------------------
+
+  // Stronger first level
+  &.source > .dictionary > .string {
+    .uno-1();
+  }
+
 }
