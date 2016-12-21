@@ -1,17 +1,33 @@
 // HTML
 
 .html {
-  &.meta {
-    .uno-3();
+
+  &.entity.name.tag {
+    .uno-1();
   }
 
-  &.embedded .meta,
-  &.doctype,
-  &.text {
-    .uno-2();
+  &.attribute-name {
+    .duo-1();
   }
 
-  .string .id {
+  &.string {
     .tri-1();
+  }
+  &.string.punctuation {
+    .tri-2();
+  }
+
+  // Special cases -------------------------
+
+  // links
+  &.string .link {
+    .duo-1();
+    font-style: italic;
+  }
+
+  // tags that are embedded
+  &.embedded .entity.name.tag {
+    .duo-1();
+    font-style: italic;
   }
 }
