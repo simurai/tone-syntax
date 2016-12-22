@@ -1,0 +1,37 @@
+// Git Commit Message
+
+.git-commit {
+
+
+
+  // Special cases ----------------------
+
+  // Weak 2nd line
+  [data-screen-row="1"] & {
+    .uno-3();
+  }
+
+  // Strong subject
+  [data-screen-row="0"] & {
+    .uno-1();
+    font-weight: 500;
+  }
+
+  &.deleted {
+    color: @syntax-color-removed;
+  }
+
+  &.changed {
+    color: @syntax-color-modified;
+  }
+
+  &.inserted {
+    color: @syntax-color-added;
+  }
+
+  // Too long
+  &.line-too-long.line-too-long {
+    background-color: mix( @syntax-color-removed, @syntax-background-color, 33% );
+  }
+
+}

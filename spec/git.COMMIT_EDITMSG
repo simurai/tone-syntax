@@ -1,6 +1,9 @@
 This is the summary line. It can't be too long.
 
-After I can write a much more detailed description without quite the same restrictions on length.
+After I can write a much more detailed description without quite the
+same restrictions on length.
+
+But if the line gets toooooooooooooooooooo long, you should add a line break.
 
 # Please enter the commit message for your changes. Lines starting
 # with '#' will be ignored, and an empty message aborts the commit.
