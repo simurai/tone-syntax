@@ -29,6 +29,7 @@ tom.move()
 # Assignment:
 number   = 42
 opposite = true
+not-true = false
 
 # Conditions:
 number = -42 if opposite

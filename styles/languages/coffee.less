@@ -1,7 +1,37 @@
 // Coffee
 
 .coffee {
-  // &.xxx {
-  //   .uno-2();
-  // }
+
+  &.class.storage {
+    .uno-1();
+  }
+
+  &.keyword {
+    .duo-2();
+  }
+  &.class.name,
+  &.inherited-class {
+    .duo-1();
+  }
+
+  &.string {
+    .tri-2();
+  }
+  &.constant {
+    .tri-1();
+  }
+
+
+  // Special cases ------------
+
+  // Green for true
+  &.true {
+    color: @syntax-color-added;
+  }
+
+  // Red for false
+  &.false {
+    color: @syntax-color-removed;
+  }
+
 }
