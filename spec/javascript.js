@@ -20,6 +20,7 @@ console.log(car.special);
 return {
   restrict: 'E',
   transclude: true,
+  transclude: false,
   scope: {
     options: '='
   },

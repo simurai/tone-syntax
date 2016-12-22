@@ -1,9 +1,31 @@
+// JavaScript
+
 .js {
-  &.delimiter {
-    .uno-3();
+  &.function.name  {
+    .uno-1();
   }
-  &.source {
-    .uno-2();
-    .punctuation-mixin();
+
+  &.keyword {
+    .duo-2();
+  }
+
+  &.string {
+    .tri-2();
+  }
+  &.constant {
+    .tri-1();
+  }
+
+
+  // Special cases ------------
+
+  // Green for true
+  &.true {
+    color: @syntax-color-added;
+  }
+
+  // Red for false
+  &.false {
+    color: @syntax-color-removed;
   }
 }
