@@ -1,29 +1,28 @@
 // Language syntax highlighting
 
-.punctuation-mixin() {
-  .punctuation,
-  .bracket,
-  .brace {
-    .uno-3();
-  }
-}
-.punctuation-mixin();
-
+.punctuation,
 .comment {
   .uno-3();
-  font-style: italic;
 }
 
+.source, // Default, Will be used by all languages when no other scope is defined
+.comment.documentation {
+  .uno-2();
+}
 
-// Default -----------------------------------
-// Will be used by all languages when no other scope is defined
-
-.source {
+.comment.documentation {
   .uno-2();
 }
 
 
-// Text styles -----------------------------------
+// Special case -----------------------------------
+
+.comment {
+  font-style: italic;
+  & > * {
+    color: inherit;
+  }
+}
 
 .bold {
   font-weight: bold;
