@@ -24,21 +24,21 @@
       "properties": {
         "uno": {
           "title": "Uno",
-          "description": "Customize the main color",
+          "description": "Customize accent color: 1",
           "order": 1,
           "type": "color",
           "default": "#a59ccc"
         },
         "duo": {
           "title": "Duo",
-          "description": "Customize the 1st accent color",
+          "description": "Customize accent color: 2",
           "order": 2,
           "type": "color",
           "default": "#ffe685"
         },
         "tri": {
           "title": "Tri",
-          "description": "Customize the 2nd accent color",
+          "description": "Customize accent color: 3",
           "order": 3,
           "type": "color",
           "default": "#ff9966"

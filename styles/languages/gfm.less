@@ -1,59 +1,59 @@
 // GF MarkDown
 
 .gfm {
-  .uno-1();
 
   .link {
-    .uno-2();
+    .base-3(); // ![]()
   }
 
   &.markup {
-    .uno-2();
 
-    &.bold   { .bold(); }
-    &.italic { .italic(); }
+    &.bold   {
+      .uno-1();
+      .bold();
+    }
+
+    &.italic {
+      .duo-1();
+      .italic();
+    }
+
     &.strike {
-      .uno-3();
+      .base-3();
       text-decoration: line-through;
     }
 
     &.raw {
-      .tri-1(); // Fenced code blocks
+      .tri-1(); // Fenced code
     }
 
     &.raw .support,
     &.code .support {
-      .uno-2(); // Fenced code blocks
+      .base-3(); // Fenced code blocks
     }
   }
 
-  &.comment  {
-    .uno-2();
-    &.quote {
-      .uno-2();
-    }
+  &.quote  {
+    .base-2();
   }
 
   &.table {
-    .tri-1();
+    .uno-1();
 
     .border,
     .pipe {
-      .uno-3();
+      .uno-2();
     }
   }
 
   &.variable,
   &.entity {
-    .tri-1();
+    .duo-1();
   }
-  &.support  { .tri-1(); }
 
   &.heading-1,
   &.heading-2,
-  &.heading-3 {
-    .tri-1();
-  }
+  &.heading-3,
   &.heading-4,
   &.heading-5,
   &.heading-6 {

@@ -50,9 +50,8 @@ setColors = ->
   # _scaleDuo = chroma.scale([_duoHigh,          _duoLow]).colors(2)
   # _scaleTri = chroma.scale([_triHigh,          _triLow]).colors(2)
 
-  root.style.setProperty('--uno-1', chroma.mix( uno, 'hsl(250, 100%, 96%)', .33))  # how much white
-  root.style.setProperty('--uno-2', uno)                                            # <- set by user
-  root.style.setProperty('--uno-3', chroma.mix( uno, 'hsl(250, 6%, 18%)', .33))    # how much desaturated background (@syntax-bg)
+  root.style.setProperty('--uno-1', uno)                                          # <- set by user
+  root.style.setProperty('--uno-2', chroma.mix( uno, 'hsl(250, 6%, 18%)', .33))    # how much desaturated background (@syntax-bg)
 
   root.style.setProperty('--duo-1', duo)                                         # <- set by user
   root.style.setProperty('--duo-2', chroma.mix( duo, 'hsl(250, 12%, 18%)', .33)) # how much background (@syntax-bg)
@@ -67,7 +66,6 @@ setColors = ->
 unsetColors = ->
   root.style.removeProperty('--uno-1')
   root.style.removeProperty('--uno-2')
-  root.style.removeProperty('--uno-3')
 
   root.style.removeProperty('--duo-1')
   root.style.removeProperty('--duo-2')

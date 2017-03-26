@@ -3,7 +3,13 @@
 
 @syntax-hue:              250;
 
-@syntax-fg:               hsl(@syntax-hue, 66%, 80%);
+// base
+@base-1: hsl(@syntax-hue, 99%, 96%);
+@base-2: hsl(@syntax-hue, 18%, 55%);
+@base-3: hsl(@syntax-hue, 12%, 40%);
+
+
+@syntax-fg:               @base-1;
 @syntax-bg:               hsl(@syntax-hue, 12%, 18%);
 @syntax-accent:           hsl(@syntax-hue, 100%, 72%);
 @syntax-guide:            lighten(@syntax-bg, 8%);

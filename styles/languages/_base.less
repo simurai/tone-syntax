@@ -2,17 +2,19 @@
 
 .punctuation,
 .comment {
-  .uno-3();
-}
-
-.source, // Default, Will be used by all languages when no other scope is defined
-.comment.documentation {
-  .uno-2();
+  .base-3();
 }
 
 .comment.documentation {
-  .uno-2();
+  .base-2();
 }
+
+// Default, Will be used by all languages when no other scope is defined
+.source {
+  .base-1();
+}
+
+
 
 
 // Special case -----------------------------------

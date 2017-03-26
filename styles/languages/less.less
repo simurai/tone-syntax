@@ -4,23 +4,9 @@
   &.function {
     .duo-2();
   }
+
+  &.variable,
   &.mixin {
-    .duo-1();
-  }
-
-
-  // Special -----------------------------
-
-  // Variables
-
-  // weaker variable color when used
-  &.variable {
-    .duo-2();
-  }
-
-  // stronger variable color when declaring
-  & > .variable:first-child,
-  .property-list > .variable {
     .duo-1();
   }
 }
