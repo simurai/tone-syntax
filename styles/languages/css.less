@@ -4,43 +4,24 @@
 
   // invalid
   &.property-name,
-  &.property-value {
-    .uno-3();
-  }
+  &.property-value
+  { .fg-1(); }
 
   // valid
-  &.property-name.support {
-    .uno-2();
-  }
+  &.property-name.support,
+  &.pseudo-class
+  { .uno-2(); }
 
-  &.tag {
-    .uno-1();
-  }
-  &.attribute-name {
-    &.id,
-    &.class,
-    &.parent-selector {
-      .uno-1();
-    }
-  }
-
-
-  &.function {
-    .duo-1();
-  }
-  &.pseudo-class {
-    .duo-1();
-  }
+  &.function
+  { .uno-1(); }
 
   &.punctuation.constant,
-  &.unit {
-    .tri-2();
-  }
+  &.unit
+  { .tri-2(); }
 
   &.string,
-  &.constant {
-    .tri-1();
-  }
+  &.constant
+  { .tri-1(); }
 
   // Special case
 

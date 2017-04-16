@@ -6,6 +6,7 @@
     .uno-1();
   }
 
+  &.variable,
   &.function {
     .duo-2();
   }
@@ -19,20 +20,6 @@
   &.string,
   &.constant {
     .tri-1();
-  }
-
-  // Special -----------------------------
-
-  // Variables
-  // weaker variable color when used
-  &.variable {
-    .duo-2();
-  }
-
-  // stronger variable color when declaring
-  &.set.variable > .variable:first-child,
-  &.set.variable > .leading-whitespace + .variable {
-    .duo-1();
   }
 
 }

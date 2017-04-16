@@ -1,31 +1,18 @@
 // JavaScript
 
 .js {
-  &.function.name  {
+
+  &.string {
     .uno-1();
   }
 
   &.keyword {
-    .duo-2();
+    .duo-1();
   }
 
-  &.string {
-    .tri-2();
-  }
-  &.constant {
+  &.function.name,
+  &.constant  {
     .tri-1();
   }
 
-
-  // Special cases ------------
-
-  // Green for true
-  &.true {
-    color: @syntax-color-added;
-  }
-
-  // Red for false
-  &.false {
-    color: @syntax-color-removed;
-  }
 }

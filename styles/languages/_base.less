@@ -1,14 +1,19 @@
 // Language syntax highlighting
 
-.punctuation,
+.comment,
 .brace,
-.comment {
-  .uno-4();
-}
+.punctuation
+{ .fg-1(); }
 
-.source  {
-  .uno-2(); // Default, will be used by all languages when no other scope is defined
-}
+.comment.documentation
+{ .uno-2(); }
+
+// Default, Will be used by all languages when no other scope is defined
+.source
+{ .uno-1(); }
+
+
+
 
 
 // Special case -----------------------------------

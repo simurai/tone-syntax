@@ -1,29 +1,27 @@
-@import "colors";
-
 
 // Official Syntax Variables -----------------------------------
 
 // General colors
-@syntax-text-color:            @syntax-fg;
-@syntax-cursor-color:          @syntax-accent;
-@syntax-selection-color:       @syntax-selection;
-@syntax-selection-flash-color: @syntax-accent;
-@syntax-background-color:      @syntax-bg;
+@syntax-text-color:            #888;
+@syntax-cursor-color:          #888;
+@syntax-selection-color:       #888;
+@syntax-selection-flash-color: #888;
+@syntax-background-color:      #333;
 
 // Guide colors
-@syntax-wrap-guide-color:          @syntax-guide;
-@syntax-indent-guide-color:        @syntax-guide;
-@syntax-invisible-character-color: @syntax-guide;
+@syntax-wrap-guide-color:          #888;
+@syntax-indent-guide-color:        #888;
+@syntax-invisible-character-color: #888;
 
 // For find and replace markers
-@syntax-result-marker-color:          fade(@syntax-accent, 16%);
-@syntax-result-marker-color-selected: @syntax-accent;
+@syntax-result-marker-color:          #888;
+@syntax-result-marker-color-selected: #888;
 
 // Gutter colors
-@syntax-gutter-text-color:                mix(@syntax-fg, @syntax-bg, 33%);
-@syntax-gutter-text-color-selected:       mix(@syntax-fg, @syntax-bg, 66%);
-@syntax-gutter-background-color:          transparent;
-@syntax-gutter-background-color-selected: @syntax-selection-gutter;
+@syntax-gutter-text-color:                #888;
+@syntax-gutter-text-color-selected:       #888;
+@syntax-gutter-background-color:          #888;
+@syntax-gutter-background-color-selected: #888;
 
 // For git diff info. i.e. in the gutter
 @syntax-color-renamed:  hsl(208, 100%, 60%);

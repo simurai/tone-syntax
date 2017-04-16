@@ -1,26 +1,12 @@
 // Less
 
 .less {
-  &.function {
-    .duo-2();
-  }
-  &.mixin {
-    .duo-1();
-  }
+  &.function,
+  &.import.option
+  { .uno-1(); }
 
+  &.variable,
+  &.mixin
+  { .duo-1(); }
 
-  // Special -----------------------------
-
-  // Variables
-
-  // weaker variable color when used
-  &.variable {
-    .duo-2();
-  }
-
-  // stronger variable color when declaring
-  & > .variable:first-child,
-  .property-list > .variable {
-    .duo-1();
-  }
 }
