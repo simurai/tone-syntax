@@ -3,15 +3,15 @@
 
 atom-text-editor,
 :host {
-  color: @syntax-text-color;
-  background-color: @syntax-background-color;
+  .uno-1();
+  .bg-1();
 
   .line.cursor-line {
-    background-color: @syntax-cursor-line;
+    .bg-2();
   }
 
-  .invisible {
-    color: @syntax-text-color;
+  .selection .region {
+    .bg-3();
   }
 
   .cursor {
@@ -19,25 +19,25 @@ atom-text-editor,
     border-left-width: 2px;
   }
 
-  .selection .region {
-    background-color: @syntax-selection-color;
-  }
-
   .bracket-matcher .region {
     border-bottom: 1px solid var(--accent);
   }
 
+  .invisible {
+    .fg-2();
+  }
+
   .invisible-character {
-    color: @syntax-invisible-character-color;
+    .fg-2();
     -webkit-font-smoothing: antialiased;
   }
 
   .indent-guide {
-    color: @syntax-indent-guide-color;
+    .fg-2();
   }
 
   .wrap-guide {
-    background-color: @syntax-wrap-guide-color;
+    .bg-2();
   }
 
   // find + replace
@@ -58,7 +58,7 @@ atom-text-editor,
   .gutter {
 
     .line-number {
-      color: @syntax-gutter-text-color;
+      .fg-1();
       -webkit-font-smoothing: antialiased;
 
       &.git-line-removed:before {
@@ -75,8 +75,8 @@ atom-text-editor,
       }
 
       &.cursor-line {
-        color: @syntax-gutter-text-color-selected;
-        background-color: @syntax-gutter-background-color-selected;
+        .uno-1();
+        .bg-2();
       }
 
       &.cursor-line-no-selection {
@@ -84,7 +84,7 @@ atom-text-editor,
       }
 
       .icon-right {
-        color: @syntax-text-color;
+        .uno-1();
       }
     }
   }
@@ -92,6 +92,6 @@ atom-text-editor,
   .gutter .line-number.folded,
   .gutter .line-number:after,
   .fold-marker:after {
-    color: @syntax-gutter-text-color-selected;
+    .uno-1();
   }
 }

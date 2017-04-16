@@ -4,12 +4,14 @@ root = document.documentElement
 uno = ''
 duo = ''
 tri = ''
+bg = ''
 
 module.exports =
   activate: (state) ->
     uno = atom.config.get('tone-dark-syntax.color.uno').toHexString()
     duo = atom.config.get('tone-dark-syntax.color.duo').toHexString()
     tri = atom.config.get('tone-dark-syntax.color.tri').toHexString()
+    bg  = atom.config.get('tone-dark-syntax.color.bg').toHexString()
     setColors()
 
     # Change Uno
@@ -25,6 +27,11 @@ module.exports =
     # Change Tri
     atom.config.onDidChange 'tone-dark-syntax.color.tri', ({newValue, oldValue}) ->
       tri = newValue.toHexString()
+      setColors()
+
+    # Change BG
+    atom.config.onDidChange 'tone-dark-syntax.color.bg', ({newValue, oldValue}) ->
+      bg = newValue.toHexString()
       setColors()
 
   deactivate: ->
@@ -54,10 +61,17 @@ setColors = ->
   root.style.setProperty('--uno-2', chroma.mix( uno, 'hsl(250, 6%, 18%)', .5))    # how much desaturated background (@syntax-bg)
 
   root.style.setProperty('--duo-1', duo)                                         # <- set by user
-  root.style.setProperty('--duo-2', chroma.mix( duo, 'hsl(250, 12%, 18%)', .5)) # how much background (@syntax-bg)
+  root.style.setProperty('--duo-2', chroma.mix( duo, 'hsl(250, 12%, 18%)', .5))  # how much background (@syntax-bg)
 
   root.style.setProperty('--tri-1', tri)                                         # <- set by user
-  root.style.setProperty('--tri-2', chroma.mix( tri, 'hsl(250, 12%, 18%)', .5)) # how much background (@syntax-bg)
+  root.style.setProperty('--tri-2', chroma.mix( tri, 'hsl(250, 12%, 18%)', .5))  # how much background (@syntax-bg)
+
+  root.style.setProperty('--bg-1', bg)                                           # <- set by user
+  root.style.setProperty('--bg-2', chroma.mix( bg, uno, .05))                     # how much uno
+  root.style.setProperty('--bg-3', chroma.mix( bg, uno, .15))                     # how much uno
+
+  root.style.setProperty('--fg-1', chroma.mix( bg, uno, .3))                     # how much uno
+  root.style.setProperty('--fg-2', chroma.mix( bg, uno, .1))                     # how much uno
 
   root.style.setProperty('--accent', tri)
 
@@ -72,5 +86,12 @@ unsetColors = ->
 
   root.style.removeProperty('--tri-1')
   root.style.removeProperty('--tri-2')
+
+  root.style.removeProperty('--bg-1')
+  root.style.removeProperty('--bg-2')
+  root.style.removeProperty('--bg-3')
+
+  root.style.removeProperty('--fg-1')
+  root.style.removeProperty('--fg-2')
 
   root.style.removeProperty('--accent')

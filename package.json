@@ -42,6 +42,13 @@
           "order": 3,
           "type": "color",
           "default": "#ff9a91"
+        },
+        "bg": {
+          "title": "Background",
+          "description": "Customize the background color",
+          "order": 4,
+          "type": "color",
+          "default": "#9beaca"
         }
       }
     }
