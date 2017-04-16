@@ -1,6 +1,6 @@
 # Tone dark
 
-An Atom theme with 3 customizable colors.
+An Atom theme with customizable colors.
 
 <img alt="DuoTone dark" sizes="272px"
   src="https://cloud.githubusercontent.com/assets/378023/6996305/4d567190-dbbb-11e4-8ae8-4be016a85c68.png"
@@ -32,7 +32,7 @@ apm install tone-dark-syntax
 
 ## Settings
 
-You can change the color scheme by going to `Settings > Themes > tone-dark-syntax Theme` (or the cog icon next to the theme picker). There you can customize the 3 accent colors.
+You can change the color scheme by going to `Settings > Themes > tone-dark-syntax Theme` (or the cog icon next to the theme picker). There you can customize the colors.
 
 ![Custom Colors](https://cloud.githubusercontent.com/assets/378023/20046592/ccb836fa-a4ee-11e6-8441-816c8e0709c7.png)
 
@@ -41,19 +41,30 @@ You can change the color scheme by going to `Settings > Themes > tone-dark-synta
 
 Why is the language support somewhat sparse? I think in order to decide how a language should be highlighted, you have to understand the language. Only then you can get the nuances right. Therefore this theme only supports a language if somebody actively maintains it.
 
+### Actively supported languages
+
 Language | Extension | Maintainer
 --- | --- | ---
-CoffeeScript | `.coffee` | :wave: Maintainer needed
 CSS | `.css` | [@simurai](https://github.com/simurai)
 GF Markdown | `.md` | [@simurai](https://github.com/simurai)
 Git Commit Message | `.COMMIT_EDITMSG` | [@simurai](https://github.com/simurai)
 HTML | `.html` | [@simurai](https://github.com/simurai)
-JavaScript | `.js` | :wave: Maintainer needed
 JSON | `.json` | [@simurai](https://github.com/simurai)
 Less | `.less` | [@simurai](https://github.com/simurai)
 Sass | `.scss` | [@simurai](https://github.com/simurai)
 Text | `.txt` | [@simurai](https://github.com/simurai)
 Todo | `.txt` | [@simurai](https://github.com/simurai)
+
+### Un-maintained languages
+
+Language | Extension | Maintainer
+--- | --- | ---
+CoffeeScript | `.coffee` | :wave: Maintainer wanted
+JavaScript | `.js` | :wave: Maintainer wanted
+??? | ??? | :wave: Maintainer wanted
+
+
+## Contribute
 
 Want to contribute? Awesome! Here the steps to add syntax highlighting for a specific language:
 
