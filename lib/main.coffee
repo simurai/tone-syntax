@@ -51,13 +51,13 @@ setColors = ->
   # _scaleTri = chroma.scale([_triHigh,          _triLow]).colors(2)
 
   root.style.setProperty('--uno-1', uno)                                          # <- set by user
-  root.style.setProperty('--uno-2', chroma.mix( uno, 'hsl(250, 6%, 18%)', .33))    # how much desaturated background (@syntax-bg)
+  root.style.setProperty('--uno-2', chroma.mix( uno, 'hsl(250, 6%, 18%)', .5))    # how much desaturated background (@syntax-bg)
 
   root.style.setProperty('--duo-1', duo)                                         # <- set by user
-  root.style.setProperty('--duo-2', chroma.mix( duo, 'hsl(250, 12%, 18%)', .33)) # how much background (@syntax-bg)
+  root.style.setProperty('--duo-2', chroma.mix( duo, 'hsl(250, 12%, 18%)', .5)) # how much background (@syntax-bg)
 
   root.style.setProperty('--tri-1', tri)                                         # <- set by user
-  root.style.setProperty('--tri-2', chroma.mix( tri, 'hsl(250, 12%, 18%)', .33)) # how much background (@syntax-bg)
+  root.style.setProperty('--tri-2', chroma.mix( tri, 'hsl(250, 12%, 18%)', .5)) # how much background (@syntax-bg)
 
   root.style.setProperty('--accent', tri)
 
