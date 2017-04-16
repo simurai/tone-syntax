@@ -44,14 +44,17 @@ atom-text-editor,
   .find-result .region.region.region,
   .current-result .region.region.region {
     border-radius: 0px;
-    background-color: @syntax-result-marker-color;
     transition: border-color .4s;
   }
   .find-result .region.region.region {
     border: 2px solid transparent;
+    background-color: var(--accent);
+    opacity: .15;
   }
   .current-result .region.region.region {
-    border: 2px solid @syntax-result-marker-color-selected;
+    border: none;
+    border-bottom: 2px solid var(--accent);
+    background-color: transparent;
     transition-duration: .1s;
   }
 
