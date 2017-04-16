@@ -19,6 +19,9 @@ bg3 = ''
 fg1 = ''
 fg2 = ''
 
+writeSyntaxVariablesTimeout = null
+
+
 module.exports =
   activate: (state) ->
     uno1 = atom.config.get('tone-dark-syntax.color.uno').toHexString()
@@ -26,27 +29,30 @@ module.exports =
     tri1 = atom.config.get('tone-dark-syntax.color.tri').toHexString()
     bg1  = atom.config.get('tone-dark-syntax.color.bg').toHexString()
     setColors()
-    updateSyntaxVariables(syntaxVariablesPath)
 
     # Change Uno
     atom.config.onDidChange 'tone-dark-syntax.color.uno', ({newValue, oldValue}) ->
       uno1 = newValue.toHexString()
       setColors()
+      updateSyntaxVariables(syntaxVariablesPath)
 
     # Change Duo
     atom.config.onDidChange 'tone-dark-syntax.color.duo', ({newValue, oldValue}) ->
       duo1 = newValue.toHexString()
       setColors()
+      updateSyntaxVariables(syntaxVariablesPath)
 
     # Change Tri
     atom.config.onDidChange 'tone-dark-syntax.color.tri', ({newValue, oldValue}) ->
       tri1 = newValue.toHexString()
       setColors()
+      updateSyntaxVariables(syntaxVariablesPath)
 
     # Change BG
     atom.config.onDidChange 'tone-dark-syntax.color.bg', ({newValue, oldValue}) ->
       bg1 = newValue.toHexString()
       setColors()
+      updateSyntaxVariables(syntaxVariablesPath)
 
   deactivate: ->
     unsetColors()
@@ -59,20 +65,20 @@ setColors = ->
   # create different shades
 
   # uno1                            # <- set by user
-  uno2 = chroma.mix( uno, bg, .5)   # how much bg
+  uno2 = chroma.mix( uno1, bg1, .5)   # how much bg
 
   # duo1                            # <- set by user
-  duo2 = chroma.mix( duo, bg, .5)   # how much bg
+  duo2 = chroma.mix( duo1, bg1, .5)   # how much bg
 
   # tri1                            # <- set by user
-  tri2 = chroma.mix( tri, bg, .5)   # how much bg
+  tri2 = chroma.mix( tri1, bg1, .5)   # how much bg
 
   # bg1                             # <- set by user
-  bg2 = chroma.mix( bg, uno, .05)   # how much uno
-  bg3 = chroma.mix( bg, uno, .15)   # how much uno
+  bg2 = chroma.mix( bg1, uno1, .05)   # how much uno
+  bg3 = chroma.mix( bg1, uno1, .15)   # how much uno
 
-  fg1 = chroma.mix( bg, uno, .3)    # how much uno
-  fg2 = chroma.mix( bg, uno, .1)    # how much uno
+  fg1 = chroma.mix( bg1, uno1, .3)    # how much uno
+  fg2 = chroma.mix( bg1, uno1, .1)    # how much uno
 
 
   # update custom properties
@@ -157,6 +163,11 @@ generateSyntaxVariables = ->
   """
   return syntaxVariables
 
+
 updateSyntaxVariables = ->
-  fs.writeFileSync syntaxVariablesPath, generateSyntaxVariables()
   # console.log "Update SyntaxVariables"
+  clearTimeout(writeSyntaxVariablesTimeout)
+  writeSyntaxVariablesTimeout = setTimeout( ->
+    # console.log "Write SyntaxVariables"
+    fs.writeFileSync syntaxVariablesPath, generateSyntaxVariables()
+  10000) # only update the variables if there was some idle time
