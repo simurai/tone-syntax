@@ -3,19 +3,19 @@
 
 atom-text-editor,
 :host {
-  .uno-1();
-  .bg-1();
+  .uno-1(); // @syntax-text-color
+  .bg-1(); // @syntax-background-color
 
   .line.cursor-line {
     .bg-2();
   }
 
   .selection .region {
-    .bg-3();
+    .bg-3(); // @syntax-selection-color
   }
 
   .cursor {
-    border-color: var(--accent);
+    border-color: var(--accent); // @syntax-cursor-color
     border-left-width: 2px;
   }
 
@@ -28,16 +28,16 @@ atom-text-editor,
   }
 
   .invisible-character {
-    .fg-2();
+    .fg-2(); // @syntax-invisible-character-color
     -webkit-font-smoothing: antialiased;
   }
 
   .indent-guide {
-    .fg-2();
+    .fg-2(); // @syntax-indent-guide-color
   }
 
   .wrap-guide {
-    .bg-2();
+    .bg-2(); // @syntax-wrap-guide-color
   }
 
   // find + replace
@@ -61,7 +61,7 @@ atom-text-editor,
   .gutter {
 
     .line-number {
-      .fg-1();
+      .fg-1(); // @syntax-gutter-text-color
       -webkit-font-smoothing: antialiased;
 
       &.git-line-removed:before {
@@ -78,8 +78,8 @@ atom-text-editor,
       }
 
       &.cursor-line {
-        .uno-1();
-        .bg-2();
+        .uno-1(); // @syntax-gutter-text-color-selected
+        .bg-2(); // @syntax-gutter-background-color-selected
       }
 
       &.cursor-line-no-selection {
