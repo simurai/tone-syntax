@@ -4,9 +4,13 @@
 fs = require 'fs'
 chroma = require 'chroma-js'
 
+# Variables
 root = document.documentElement
 syntaxVariablesPath = "#{__dirname}/../styles/syntax-variables.less"
+writeSyntaxVariablesTimeout = null
+syncUI = null
 
+# Colors
 uno1 = ''
 uno2 = ''
 duo1 = ''
@@ -19,8 +23,6 @@ bg3 = ''
 fg1 = ''
 fg2 = ''
 
-writeSyntaxVariablesTimeout = null
-
 
 module.exports =
   activate: (state) ->
@@ -28,52 +30,60 @@ module.exports =
     duo1 = atom.config.get('tone-dark-syntax.color.duo').toHexString()
     tri1 = atom.config.get('tone-dark-syntax.color.tri').toHexString()
     bg1  = atom.config.get('tone-dark-syntax.color.bg').toHexString()
+    syncUI  = atom.config.get('tone-dark-syntax.color.syncUI')
+
     setColors()
 
     # Change Uno
     atom.config.onDidChange 'tone-dark-syntax.color.uno', ({newValue, oldValue}) ->
       uno1 = newValue.toHexString()
       setColors()
-      updateSyntaxVariables(syntaxVariablesPath)
+      unSyncUI()
 
     # Change Duo
     atom.config.onDidChange 'tone-dark-syntax.color.duo', ({newValue, oldValue}) ->
       duo1 = newValue.toHexString()
       setColors()
-      updateSyntaxVariables(syntaxVariablesPath)
+      unSyncUI()
 
     # Change Tri
     atom.config.onDidChange 'tone-dark-syntax.color.tri', ({newValue, oldValue}) ->
       tri1 = newValue.toHexString()
       setColors()
-      updateSyntaxVariables(syntaxVariablesPath)
+      unSyncUI()
 
     # Change BG
     atom.config.onDidChange 'tone-dark-syntax.color.bg', ({newValue, oldValue}) ->
       bg1 = newValue.toHexString()
       setColors()
-      updateSyntaxVariables(syntaxVariablesPath)
+      unSyncUI()
+
+    # Change Sync UI
+    atom.config.onDidChange 'tone-dark-syntax.color.syncUI', ({newValue, oldValue}) ->
+      syncUI = newValue
+      if syncUI is true then updateSyntaxVariables(syntaxVariablesPath)
 
   deactivate: ->
     unsetColors()
 
 
-# Apply Colors -----------------------
+
+# Set Colors -----------------------
 
 setColors = ->
 
-  # create different shades
+  # Create all different shades
 
-  # uno1                            # <- set by user
+  # uno1                              # <- set by user
   uno2 = chroma.mix( uno1, bg1, .5)   # how much bg
 
-  # duo1                            # <- set by user
+  # duo1                              # <- set by user
   duo2 = chroma.mix( duo1, bg1, .5)   # how much bg
 
-  # tri1                            # <- set by user
+  # tri1                              # <- set by user
   tri2 = chroma.mix( tri1, bg1, .5)   # how much bg
 
-  # bg1                             # <- set by user
+  # bg1                               # <- set by user
   bg2 = chroma.mix( bg1, uno1, .05)   # how much uno
   bg3 = chroma.mix( bg1, uno1, .15)   # how much uno
 
@@ -81,10 +91,11 @@ setColors = ->
   fg2 = chroma.mix( bg1, uno1, .1)    # how much uno
 
 
-  # update custom properties
+  # Remove all properties
+  # Prevents adding endless properties
+  unsetColors()
 
-  unsetColors() # prevents adding endless properties
-
+  # Update custom properties
   root.style.setProperty('--uno-1', uno1)
   root.style.setProperty('--uno-2', uno2)
 
@@ -104,9 +115,11 @@ setColors = ->
   root.style.setProperty('--accent', tri1)
 
 
+
 # Unset Colors -----------------------
 
 unsetColors = ->
+  # Remove all properties (e.g. when switching to another theme)
   root.style.removeProperty('--uno-1')
   root.style.removeProperty('--uno-2')
 
@@ -126,9 +139,16 @@ unsetColors = ->
   root.style.removeProperty('--accent')
 
 
+
 # Syntax Variables -----------------------
 
+unSyncUI = ->
+  # Mark the syntax variables as "out of sync"
+  if syncUI is true then atom.config.set('tone-dark-syntax.color.syncUI', false)
+
+
 generateSyntaxVariables = ->
+  # Here all the Syntax Variables get filled with the right values
   syntaxVariables = """
     // Official Syntax Variables -----------------------------------
     // Generated from lib/main.coffee
@@ -165,9 +185,9 @@ generateSyntaxVariables = ->
 
 
 updateSyntaxVariables = ->
-  # console.log "Update SyntaxVariables"
+  # Only write to syntax-variables.less after a short delay
+  # Because some people just love to stress-test checkboxes
   clearTimeout(writeSyntaxVariablesTimeout)
   writeSyntaxVariablesTimeout = setTimeout( ->
-    # console.log "Write SyntaxVariables"
     fs.writeFileSync syntaxVariablesPath, generateSyntaxVariables()
-  10000) # only update the variables if there was some idle time
+  1000)

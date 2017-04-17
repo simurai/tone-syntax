@@ -48,7 +48,14 @@
           "description": "Customize the background color",
           "order": 4,
           "type": "color",
-          "default": "#9beaca"
+          "default": "#222222"
+        },
+        "syncUI": {
+          "title": "Sync UI",
+          "description": "After making some changes, enable this to sync the colors also with other UI themes and packages. Note: It may take a few seconds to take effect. Doing this manually keeps the performance police happy. 🚓",
+          "order": 5,
+          "type": "boolean",
+          "default": "true"
         }
       }
     }
