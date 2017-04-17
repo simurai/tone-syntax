@@ -153,6 +153,12 @@ generateSyntaxVariables = ->
     // Official Syntax Variables -----------------------------------
     // Generated from lib/main.coffee
 
+    // Colors:
+    // bg: "#{bg1}"
+    // duo: "#{duo1}"
+    // tri: "#{tri1}"
+    // uno: "#{uno1}"
+
     // General colors
     @syntax-text-color:            #{uno1};
     @syntax-cursor-color:          #{tri1};

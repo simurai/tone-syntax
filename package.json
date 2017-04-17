@@ -27,28 +27,28 @@
           "description": "Customize accent color: 1",
           "order": 1,
           "type": "color",
-          "default": "#9beaca"
+          "default": "#dbdbff"
         },
         "duo": {
           "title": "Duo",
           "description": "Customize accent color: 2",
           "order": 2,
           "type": "color",
-          "default": "#b6a3ef"
+          "default": "#6cbeff"
         },
         "tri": {
           "title": "Tri",
           "description": "Customize accent color: 3",
           "order": 3,
           "type": "color",
-          "default": "#ff9a91"
+          "default": "#1fffd2"
         },
         "bg": {
           "title": "Background",
           "description": "Customize the background color",
           "order": 4,
           "type": "color",
-          "default": "#222222"
+          "default": "#2e2e43"
         },
         "syncUI": {
           "title": "Sync UI",
