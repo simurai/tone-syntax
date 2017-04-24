@@ -43,19 +43,18 @@ atom-text-editor,
   // find + replace
   .find-result .region.region.region,
   .current-result .region.region.region {
-    border-radius: 0px;
-    transition: border-color .4s;
-  }
-  .find-result .region.region.region {
-    border: 2px solid transparent;
-    background-color: var(--accent);
-    opacity: .15;
-  }
-  .current-result .region.region.region {
     border: none;
-    border-bottom: 2px solid var(--accent);
-    background-color: transparent;
-    transition-duration: .1s;
+    border-radius: 0px;
+    background-color: var(--duo-1);
+    opacity: .15;
+    transition: none;
+  }
+
+  // highlight-selected
+  [class="highlight highlight-selected background"] .region.region.region.region, // TODO: <- Remove when fixed in Core, currently background -> syntax--background
+  .highlight-selected.background .region.region {
+    background-color: var(--duo-1);
+    opacity: .15;
   }
 
   .gutter {

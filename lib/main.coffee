@@ -84,8 +84,8 @@ setColors = ->
   tri2 = chroma.mix( tri1, bg1, .5)   # how much bg
 
   # bg1                               # <- set by user
-  bg2 = chroma.mix( bg1, uno1, .05)   # how much uno
-  bg3 = chroma.mix( bg1, uno1, .15)   # how much uno
+  bg2 = chroma.mix( bg1, uno1, .04)   # how much uno
+  bg3 = chroma.mix( bg1, uno1, .12)   # how much uno
 
   fg1 = chroma.mix( bg1, uno1, .3)    # how much uno
   fg2 = chroma.mix( bg1, uno1, .1)    # how much uno
@@ -166,7 +166,7 @@ generateSyntaxVariables = ->
     @syntax-text-color:            #{uno1};
     @syntax-cursor-color:          #{tri1};
     @syntax-selection-color:       #{bg3};
-    @syntax-selection-flash-color: #{tri1};
+    @syntax-selection-flash-color: #{duo1};
     @syntax-background-color:      #{bg1};
 
     // Guide colors
