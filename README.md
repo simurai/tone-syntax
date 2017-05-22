@@ -18,6 +18,8 @@ apm install tone-dark-syntax
 
 You can change the color scheme by going to `Settings > Themes > tone-dark-syntax Theme` (or the cog icon next to the theme picker). There you can customize the colors.
 
+![Tone settings](https://cloud.githubusercontent.com/assets/378023/26289237/307eb036-3ed9-11e7-9b53-f6aae56a7fac.png)
+
 
 ## Language support
 
