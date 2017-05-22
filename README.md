@@ -4,6 +4,8 @@ An Atom __syntax theme__ with customizable colors.
 
 It __tones down__ less important parts (like punctuation and brackets) and highlights only the __important__ ones. This leads to a more calm color scheme, but still lets you find the stuff you're looking for.
 
+![Tone theme](https://cloud.githubusercontent.com/assets/378023/26292529/a9713500-3ef1-11e7-8dae-28a391bbc5d7.png)
+
 
 ## Settings
 
