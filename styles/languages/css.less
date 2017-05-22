@@ -1,31 +1,31 @@
 // CSS
 
-.css {
+.@{s}css {
 
   // invalid
-  &.property-name,
-  &.property-value
+  &.@{s}property-name,
+  &.@{s}property-value
   { .fg-1(); }
 
   // valid
-  &.property-name.support,
-  &.pseudo-class
+  &.@{s}property-name.@{s}support,
+  &.@{s}pseudo-class
   { .uno-2(); }
 
-  &.function
+  &.@{s}function
   { .uno-1(); }
 
-  &.punctuation.constant,
-  &.unit
+  &.@{s}punctuation.@{s}constant,
+  &.@{s}unit
   { .tri-2(); }
 
-  &.string,
-  &.constant
+  &.@{s}string,
+  &.@{s}constant
   { .tri-1(); }
 
   // Special case
 
-  &.important {
+  &.@{s}important {
     color: @syntax-color-removed;
   }
 }

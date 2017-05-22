@@ -1,62 +1,62 @@
 // GF MarkDown
 
-.gfm {
+.@{s}gfm {
 
-  .link {
+  .@{s}link {
     .fg-1(); // ![]()
   }
 
-  &.markup {
+  &.@{s}markup {
 
-    &.bold   {
+    &.@{s}bold   {
       .uno-1();
-      .bold();
+      font-weight: bold;
     }
 
-    &.italic {
+    &.@{s}italic {
       .duo-1();
-      .italic();
+      font-style: italic;
     }
 
-    &.strike {
+    &.@{s}strike {
       .fg-1();
       text-decoration: line-through;
     }
 
-    &.raw {
+    &.@{s}raw {
       .tri-1(); // Fenced code
     }
 
-    &.raw .support,
-    &.code .support {
+    &.@{s}raw .@{s}support,
+    &.@{s}code .@{s}support {
       .fg-1(); // Fenced code blocks
     }
   }
 
-  &.quote  {
+  &.@{s}quote  {
     .uno-2();
   }
 
-  &.table {
+  &.@{s}table {
     .uno-1();
 
-    .border,
-    .pipe {
+    .@{s}border,
+    .@{s}pipe {
       .uno-2();
     }
   }
 
-  &.variable,
-  &.entity {
+  &.@{s}variable,
+  &.@{s}entity {
     .duo-1();
   }
 
-  &.heading-1,
-  &.heading-2,
-  &.heading-3,
-  &.heading-4,
-  &.heading-5,
-  &.heading-6 {
+  &.@{s}heading-1,
+  &.@{s}heading-2,
+  &.@{s}heading-3,
+  &.@{s}heading-4,
+  &.@{s}heading-5,
+  &.@{s}heading-6 {
     .tri-1();
   }
 

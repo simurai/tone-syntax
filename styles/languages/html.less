@@ -1,32 +1,32 @@
 // HTML
 
-.html {
+.@{s}html {
 
-  &.entity.name.tag {
+  &.@{s}entity.@{s}name.@{s}tag {
     .uno-1();
   }
 
-  &.attribute-name {
+  &.@{s}attribute-name {
     .duo-1();
   }
 
-  &.string {
+  &.@{s}string {
     .tri-1();
   }
-  &.string.punctuation {
+  &.@{s}string.@{s}punctuation {
     .tri-2();
   }
 
   // Special cases -------------------------
 
   // links
-  &.string .link {
+  &.@{s}string .@{s}link {
     .duo-1();
     font-style: italic;
   }
 
   // tags that are embedded
-  &.embedded .entity.name.tag {
+  &.@{s}embedded .@{s}entity.@{s}name.@{s}tag {
     .duo-1();
     font-style: italic;
   }

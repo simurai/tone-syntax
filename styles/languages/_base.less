@@ -1,15 +1,15 @@
 // Language syntax highlighting
 
-.comment,
-.brace,
-.punctuation
+.@{s}comment,
+.@{s}brace,
+.@{s}punctuation
 { .fg-1(); }
 
-.comment.documentation
+.@{s}comment.@{s}documentation
 { .uno-2(); }
 
 // Default, Will be used by all languages when no other scope is defined
-.source
+.@{s}source
 { .uno-1(); }
 
 
@@ -18,17 +18,17 @@
 
 // Special case -----------------------------------
 
-.comment {
+.@{s}comment {
   font-style: italic;
   & > * {
     color: inherit;
   }
 }
 
-.bold {
+.@{s}bold {
   font-weight: bold;
 }
 
-.italic {
+.@{s}italic {
   font-style: italic;
 }

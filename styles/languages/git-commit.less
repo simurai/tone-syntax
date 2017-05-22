@@ -1,6 +1,6 @@
 // Git Commit Message
 
-.git-commit {
+.@{s}git-commit {
 
 
 
@@ -17,20 +17,20 @@
     font-weight: 500;
   }
 
-  &.deleted {
+  &.@{s}deleted {
     color: @syntax-color-removed;
   }
 
-  &.changed {
+  &.@{s}changed {
     color: @syntax-color-modified;
   }
 
-  &.inserted {
+  &.@{s}inserted {
     color: @syntax-color-added;
   }
 
   // Too long
-  &.line-too-long.line-too-long {
+  &.@{s}line-too-long.@{s}line-too-long {
     background-color: mix( @syntax-color-removed, @syntax-background-color, 33% );
   }
 
