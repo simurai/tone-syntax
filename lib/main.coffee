@@ -1,5 +1,5 @@
 
-# Tone dark
+# Tone
 
 fs = require 'fs'
 chroma = require 'chroma-js'
@@ -26,40 +26,40 @@ fg2 = ''
 
 module.exports =
   activate: (state) ->
-    uno1 = atom.config.get('tone-dark-syntax.color.uno').toHexString()
-    duo1 = atom.config.get('tone-dark-syntax.color.duo').toHexString()
-    tri1 = atom.config.get('tone-dark-syntax.color.tri').toHexString()
-    bg1  = atom.config.get('tone-dark-syntax.color.bg').toHexString()
-    syncUI  = atom.config.get('tone-dark-syntax.color.syncUI')
+    uno1 = atom.config.get('tone-syntax.color.uno').toHexString()
+    duo1 = atom.config.get('tone-syntax.color.duo').toHexString()
+    tri1 = atom.config.get('tone-syntax.color.tri').toHexString()
+    bg1  = atom.config.get('tone-syntax.color.bg').toHexString()
+    syncUI  = atom.config.get('tone-syntax.color.syncUI')
 
     setColors()
 
     # Change Uno
-    atom.config.onDidChange 'tone-dark-syntax.color.uno', ({newValue, oldValue}) ->
+    atom.config.onDidChange 'tone-syntax.color.uno', ({newValue, oldValue}) ->
       uno1 = newValue.toHexString()
       setColors()
       unSyncUI()
 
     # Change Duo
-    atom.config.onDidChange 'tone-dark-syntax.color.duo', ({newValue, oldValue}) ->
+    atom.config.onDidChange 'tone-syntax.color.duo', ({newValue, oldValue}) ->
       duo1 = newValue.toHexString()
       setColors()
       unSyncUI()
 
     # Change Tri
-    atom.config.onDidChange 'tone-dark-syntax.color.tri', ({newValue, oldValue}) ->
+    atom.config.onDidChange 'tone-syntax.color.tri', ({newValue, oldValue}) ->
       tri1 = newValue.toHexString()
       setColors()
       unSyncUI()
 
     # Change BG
-    atom.config.onDidChange 'tone-dark-syntax.color.bg', ({newValue, oldValue}) ->
+    atom.config.onDidChange 'tone-syntax.color.bg', ({newValue, oldValue}) ->
       bg1 = newValue.toHexString()
       setColors()
       unSyncUI()
 
     # Change Sync UI
-    atom.config.onDidChange 'tone-dark-syntax.color.syncUI', ({newValue, oldValue}) ->
+    atom.config.onDidChange 'tone-syntax.color.syncUI', ({newValue, oldValue}) ->
       syncUI = newValue
       if syncUI is true then updateSyntaxVariables(syntaxVariablesPath)
 
@@ -144,7 +144,7 @@ unsetColors = ->
 
 unSyncUI = ->
   # Mark the syntax variables as "out of sync"
-  if syncUI is true then atom.config.set('tone-dark-syntax.color.syncUI', false)
+  if syncUI is true then atom.config.set('tone-syntax.color.syncUI', false)
 
 
 generateSyntaxVariables = ->
@@ -154,7 +154,7 @@ generateSyntaxVariables = ->
     // Generated from lib/main.coffee
 
     /* Config:
-      "tone-dark-syntax":
+      "tone-syntax":
         color:
           bg: "#{bg1}"
           duo: "#{duo1}"

@@ -1,14 +1,14 @@
 {
-  "name": "tone-dark-syntax",
+  "name": "tone-syntax",
   "theme": "syntax",
   "version": "0.0.0",
-  "description": "A dark Tone syntax theme",
+  "description": "An Atom syntax theme with customizable colors",
   "keywords": [
-    "dark",
     "tone",
-    "syntax"
+    "syntax",
+    "customizable"
   ],
-  "repository": "https://github.com/simurai/tone-dark-syntax",
+  "repository": "https://github.com/simurai/tone-syntax",
   "license": "MIT",
   "main": "lib/main",
   "engines": {

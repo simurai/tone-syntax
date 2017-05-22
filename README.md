@@ -1,29 +1,20 @@
-# Tone dark
+# Tone
 
-An Atom theme with customizable colors.
+An Atom __syntax theme__ with customizable colors.
 
 It __tones down__ less important parts (like punctuation and brackets) and highlights only the __important__ ones. This leads to a more calm color scheme, but still lets you find the stuff you're looking for.
 
 
-## Install
-
-Search for `tone-dark-syntax` in Atom's settings or install with:
-
-```
-apm install tone-dark-syntax
-```
-
-
 ## Settings
 
-You can change the color scheme by going to `Settings > Themes > tone-dark-syntax Theme` (or the cog icon next to the theme picker). There you can customize the colors.
+You can change the color scheme by going to `Settings > Themes > tone-syntax` Theme (or the cog icon next to the theme picker). There you can customize the colors. Or edit your `config` file directly.
 
 ![Tone settings](https://cloud.githubusercontent.com/assets/378023/26289237/307eb036-3ed9-11e7-9b53-f6aae56a7fac.png)
 
 
 ## Language support
 
-Why is the language support somewhat sparse? I think in order to decide how a language should be highlighted, you have to understand the language. Only then you can get the nuances right. Therefore this theme only supports a language if somebody actively maintains it.
+Why is the language support somewhat sparse? In order to decide how a language should be highlighted, it's helpful to understand the language. Only then you can get the nuances right. Therefore this theme only supports a language if somebody actively maintains it.
 
 ### Actively supported languages
 
@@ -58,4 +49,4 @@ Want to contribute? Awesome! Here the steps to add syntax highlighting for a spe
 4. Add yourself as the maintainer to this `README.md`.
 5. Make a PR. :tada:
 
-> Note: Since there are hundreds (thousands?) of languages out there, only the most commonly used languages will get accepted. :bow:
+> Note: Since there are hundreds (thousands?) of languages out there, less commonly used languages might not get accepted. :bow:
