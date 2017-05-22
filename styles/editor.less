@@ -50,8 +50,8 @@ atom-text-editor {
   }
 
   // highlight-selected
-  [class="highlight highlight-selected background"] .region.region.region.region, // TODO: <- Remove when fixed in Core, currently background -> syntax--background
-  .highlight-selected.background .region.region {
+  // Attribute selector needed since background will be asked to change to -> syntax--background
+  [class="highlight highlight-selected background"] .region.region.region.region {
     background-color: var(--duo-1);
     opacity: .15;
   }
