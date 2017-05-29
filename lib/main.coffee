@@ -189,6 +189,20 @@ generateSyntaxVariables = ->
     @syntax-color-added:    hsl(150,  60%, 54%);
     @syntax-color-modified: hsl(40,   60%, 70%);
     @syntax-color-removed:  hsl(0,    70%, 60%);
+
+    // For language entity colors
+    @syntax-color-variable:   #{tri1};
+    @syntax-color-constant:   #{duo1};
+    @syntax-color-property:   #{duo1};
+    @syntax-color-value:      #{tri1};
+    @syntax-color-function:   #{uno1};
+    @syntax-color-method:     #{uno1};
+    @syntax-color-class:      #{uno1};
+    @syntax-color-keyword:    #{tri1};
+    @syntax-color-tag:        #{uno1};
+    @syntax-color-attribute:  #{uno2};
+    @syntax-color-import:     #{uno1};
+    @syntax-color-snippet:    #{uno1};
   """
   return syntaxVariables
 
