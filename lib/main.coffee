@@ -197,8 +197,8 @@ generateSyntaxVariables = ->
     @syntax-color-value:      #{tri1};
     @syntax-color-function:   #{uno1};
     @syntax-color-method:     #{uno1};
-    @syntax-color-class:      #{uno1};
-    @syntax-color-keyword:    #{tri1};
+    @syntax-color-class:      #{tri1};
+    @syntax-color-keyword:    #{duo1};
     @syntax-color-tag:        #{uno1};
     @syntax-color-attribute:  #{uno2};
     @syntax-color-import:     #{uno1};
