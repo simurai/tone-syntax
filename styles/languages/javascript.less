@@ -15,4 +15,49 @@
     .tri-1();
   }
 
+  @object-key:      ~'.@{s}constant.@{s}other.@{s}object.@{s}key > .@{s}string.@{s}unquoted';
+  &@{object-key} {
+    .uno-2();
+  }
+
+  @template-string: ~'.@{s}string.@{s}template';
+  &@{template-string} {
+    .duo-1();
+  }
+
+  @template-string-quotes: ~'@{template-string} > .@{s}punctuation.@{s}begin, > .@{s}punctuation.@{s}end';
+  &@{template-string-quotes} {
+    .tri-1();
+  }
+
+  @template-string-expression: ~'@{template-string} > @{s}entity.@{s}quasi.@{s}element';
+  &@{template-string-expression} {
+    .uno-1();
+  }
+
+  @kw-class: ~'.@{s}storage.@{s}type.@{s}class';
+  &@{kw-class} {
+    .uno-1();
+  }
+
+  @kw-extends: ~'.@{s}storage.@{s}type.@{s}extends';
+  &@{kw-extends} {
+    .duo-2();
+  }
+
+  @class-name: ~'.@{s}class.@{s}entity.@{s}name';
+  &@{class-name} {
+    .duo-1();
+  }
+
+  @class-instance-method: ~'.@{s}class .@{s}entity.@{s}name.@{s}function.@{s}method';
+  &@{class-instance-method} {
+    .uno-1();
+  }
+
+  @class-method-params: ~'.@{s}class .@{s}meta.@{s}function.@{s}parameters';
+  &@{class-method-params} {
+    .uno-2();
+  }
+
 }
