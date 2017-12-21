@@ -22,6 +22,7 @@ bg2 = ''
 bg3 = ''
 fg1 = ''
 fg2 = ''
+cl = ''
 
 
 module.exports =
@@ -90,6 +91,7 @@ setColors = ->
   fg1 = chroma.mix( bg1, uno1, .3)    # how much uno
   fg2 = chroma.mix( bg1, uno1, .1)    # how much uno
 
+  cl  = chroma(uno1).alpha(0.04).css() # cursor line needs to have alpha
 
   # Remove all properties
   # Prevents adding endless properties
@@ -111,6 +113,8 @@ setColors = ->
 
   root.style.setProperty('--fg-1', fg1)
   root.style.setProperty('--fg-2', fg2)
+
+  root.style.setProperty('--cl', cl)
 
   root.style.setProperty('--accent', tri1)
 
@@ -135,6 +139,8 @@ unsetColors = ->
 
   root.style.removeProperty('--fg-1')
   root.style.removeProperty('--fg-2')
+
+  root.style.removeProperty('--cl')
 
   root.style.removeProperty('--accent')
 
