@@ -37,7 +37,14 @@ Todo | `.txt` | [@simurai](https://github.com/simurai)
 Language | Extension | Maintainer
 --- | --- | ---
 CoffeeScript | `.coffee` | :wave: Maintainer wanted
+C# | `.cs` | :wave: Maintainer wanted
+Go | `.go` | :wave: Maintainer wanted
+Java | `.java` | :wave: Maintainer wanted
 JavaScript | `.js` | :wave: Maintainer wanted
+PHP | `.php` | :wave: Maintainer wanted
+Python | `.py` | :wave: Maintainer wanted
+Ruby | `.rb` | :wave: Maintainer wanted
+Typescript | `.ts` | :wave: Maintainer wanted
 ??? | ??? | :wave: Maintainer wanted
 
 
