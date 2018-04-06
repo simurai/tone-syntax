@@ -28,6 +28,7 @@ Git Commit Message | `.COMMIT_EDITMSG` | [@simurai](https://github.com/simurai)
 HTML | `.html` | [@simurai](https://github.com/simurai)
 JSON | `.json` | [@simurai](https://github.com/simurai)
 Less | `.less` | [@simurai](https://github.com/simurai)
+PHP  | `.php`  | [@mdeboer](https://github.com/mdeboer)
 Sass | `.scss` | [@simurai](https://github.com/simurai)
 Text | `.txt` | [@simurai](https://github.com/simurai)
 Todo | `.txt` | [@simurai](https://github.com/simurai)
@@ -41,7 +42,6 @@ C# | `.cs` | :wave: Maintainer wanted
 Go | `.go` | :wave: Maintainer wanted
 Java | `.java` | :wave: Maintainer wanted
 JavaScript | `.js` | :wave: Maintainer wanted
-PHP | `.php` | :wave: Maintainer wanted
 Python | `.py` | :wave: Maintainer wanted
 Ruby | `.rb` | :wave: Maintainer wanted
 Typescript | `.ts` | :wave: Maintainer wanted

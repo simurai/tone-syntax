@@ -2,14 +2,27 @@
 
 .@{s}php {
 
-  // function
+  // class and function names
+  .@{s}storage.@{s}type.@{s}class + .@{s}entity.@{s}name.@{s}class,
+  .@{s}storage.@{s}type.@{s}function + .@{s}entity.@{s}name.@{s}function {
+    .duo-1();
+  }
+
+  // extends, class and function keywords
+  &.@{s}storage.@{s}modifier.@{s}extends,
+  &.@{s}storage.@{s}type.@{s}class,
   &.@{s}storage.@{s}type.@{s}function {
+    .uno-1();
+  }
+
+  // -> operator
+  &.@{s}keyword.@{s}operator.@{s}class {
     .uno-2();
   }
 
-  // class
-  &.@{s}storage.@{s}type.@{s}class {
-    .tri-2();
+  // access modifiers (public, private, protected)
+  &.@{s}storage.@{s}modifier {
+    .uno-2();
   }
 
 }
