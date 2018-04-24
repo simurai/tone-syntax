@@ -1,7 +1,7 @@
 {
   "name": "tone-syntax",
   "theme": "syntax",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "An Atom syntax theme with customizable colors",
   "keywords": [
     "tone",
